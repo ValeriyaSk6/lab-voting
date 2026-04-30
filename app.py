@@ -195,7 +195,13 @@ with tabs[0]:
 # --- TAB 1 ---
 with tabs[1]:
     st.header("🗳️ Голосування — Лабораторна робота №1")
-    st.markdown('<div class="info-box">Введіть своє <strong>ім\'я та прізвище</strong>. Воно хешується у анонімний токен — відкрито не зберігається. Оберіть ТОП-3 країни.</div>',unsafe_allow_html=True)
+    st.markdown('''
+        <div class="info-box" style="color: black;">
+            Введіть своє <strong>ім'я та прізвище</strong>. 
+            Воно хешується у анонімний токен — відкрито не зберігається. 
+            Оберіть ТОП-3 країни.
+        </div>
+    ''', unsafe_allow_html=True)
     name1=st.text_input("✏️ Ваше ім'я та прізвище:",placeholder="Наприклад: Марія Коваленко",key="name1")
     if not name1.strip():
         st.info("👆 Введіть ім'я, щоб продовжити.")
